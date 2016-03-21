@@ -102,7 +102,7 @@ VashEngine.prototype.render = function(file, data, callback) {
 if (typeof exports !== 'undefined')  {
     module.exports = {
         /**
-         * Creates a new instance of JadeEngine class
+         * Creates a new instance of VashEngine class
          * @param {HttpContext|*} context - The underlying HTTP context.
          * @returns {VashEngine}
          */
