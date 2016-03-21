@@ -1,0 +1,30 @@
+{
+  "name": "most-web-vash",
+  "version": "1.0.0",
+  "description": "MOST Web Framework Vash View Engine",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kbarbounakis/most-web-vash.git"
+  },
+  "keywords": [
+    "most",
+    "web",
+    "vash",
+    "view",
+    "render",
+    "mvc"
+  ],
+  "author": " <Kyriakos Barbounakis>",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/kbarbounakis/most-web-vash/issues"
+  },
+  "homepage": "https://github.com/kbarbounakis/most-web-vash",
+  "dependencies": {
+    "vash": "^0.11.2"
+  }
+}
