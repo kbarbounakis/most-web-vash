@@ -85,8 +85,15 @@ VashEngine.prototype.render = function(file, data, callback) {
             }
             //render data
             try {
-                var fn = vash.compile(source),
-                    result = fn(data);
+                var fn = vash.compile(source), viewContext;
+                if (self.context && (typeof self.context.createViewContext === 'function')) {
+                    viewContext = self.context.createViewContext();
+                    viewContext.data = data;
+                }
+                else {
+                    viewContext = { data:data }
+                }
+                var result = fn(viewContext);
                 return callback(null, result);
             }
             catch (e) {

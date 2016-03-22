@@ -21,3 +21,31 @@ Register view engine by adding the following node in config/app.json engines col
         ...
         ]
     }
+
+Create a new controller (app/controllers/example-controller.js):
+
+    var web = require("most-web"), util = require("util");
+
+    function ExampleController() {
+        ExampleController.super_.call(this);
+    }
+
+    util.inherits(ExampleController, web.controllers.HttpBaseController);
+
+    ExampleController.prototype.hello = function(callback) {
+        return callback(null, this.result({ name:"Thomas" }));
+    }
+
+Create a jade template:
+
+    <h2>This a Vash example</h2>
+    <p>Hello @model.data.name!</p>
+
+Place it in views folder:
+
+    app
+        + views
+            + example
+                hello.html.vash
+
+and finally execute the action /example/hello.html
